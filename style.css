@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.welcomePage {
+    width: 70rem;
+    height: 45rem;
+    margin-top: 3rem;
+    padding: 1.5rem;
+    border-radius: 20px;
+    background: rgb(1, 49, 1);
+}
