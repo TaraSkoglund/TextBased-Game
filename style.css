@@ -9,7 +9,7 @@ body {
     height: 45rem;
     margin-top: 3rem;
     padding: 1.5rem;
-    border-radius: 20px;
+    border-radius: 35px;
     background: rgb(1, 49, 1);
     display: flex;
     justify-content: center;
@@ -17,10 +17,24 @@ body {
     flex-direction: column;
 }
 
+label{
+    font-size: 20px;
+    padding: 1rem;
+}
+
+input{
+    width: 15rem;
+    height: 1.5rem;
+    padding: 0.5rem;
+    border-radius: 25px;
+}
+
 button{
     display: block;
-    margin: 1.5rem;
+    margin-top: 3rem;
     width: 25rem;
     height: 3.5rem;
-    border-radius: 20px;
+    border-radius: 35px;
+    font-size: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
 }
