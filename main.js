@@ -41,4 +41,20 @@ let story_telling = {
     }
 };
 
+/** Reset Button */
+function resetForm(){
+    document.getElementById("theAdventure").reset();
+}
+
+/** Generate answers from story */
+function populateForm(story) {
+    let current_story = story_telling[story];
+    let text = '';
+    for (let prop in current_story['answers']){
+        if (current_story['answers'].hasOwnProperty(prop)){
+            text += '<label><input name="answer" value="' + prop + '"/><span' + current_story['answers'][prop] + '</span></label>';
+        }
+    }
+}
+
 
