@@ -1,6 +1,9 @@
 body {
     margin: 0;
+    width: 100%;
+    height: 53rem;
     color: white;
+    background: linear-gradient(#34a3ff, #027100);
     display: flex;
     justify-content: center;
 }
@@ -19,7 +22,7 @@ body {
 
 label{
     font-size: 20px;
-    padding: 1rem;
+    padding-bottom: 0.5rem;
 }
 
 input{
