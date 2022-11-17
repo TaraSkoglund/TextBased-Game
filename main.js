@@ -1,13 +1,16 @@
 window.addEventListener("DOMContentLoaded", main); 
- 
-let story = 0;
-let form = document.getElementById('theAdventure');
-let input = document.getElementById('name-input');
-let answer = '';
-console.log(form)
 
 function main() {
-   
+    loadHtmlElements
+}
+
+function loadHtmlElements() {
+    let story = 0;
+    let form = document.getElementById('theAdventure');
+    let input = document.getElementById('name-input');
+    let button1 = document.getElementById('opt-1');
+    let button2 = document.getElementById('opt-2');
+    let answer = '';
 }
 
 let story_telling = {
@@ -26,7 +29,16 @@ let story_telling = {
             "a": "I name choose to take with me the mighty sword",
             "b": "I name choose to take the magician's bag with me"
         }
+    },
+
+    /** To The Closet Path */
+    "1_b":{
+        "question": "You will be well rewarded for your heroism",
+        "answers":{
+            "a": "Okey I accept the assignment.",
+            "b": "Aslan bites off your head for your disrespectfulness."
+        }
     }
-}
+};
 
 
