@@ -42,14 +42,6 @@ button{
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
-.startOver-button {
-    display: none;
-}
-
-fieldset {
-    display: none;
-}
-
-h2{
+.hidden {
     display: none;
 }

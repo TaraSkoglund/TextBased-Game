@@ -9,25 +9,28 @@
     <script src="main.js"></script>
 </head>
 <body>
+    <div id="startStage" class="welcomePage hidden">
 
-    <div id="wrapper">
+        <h1 id="textStart"></h1>
 
-        <form id="theAdventure" class="welcomePage">
+        <label id="label-text"  for="name-input" >Enter you’re hero name</label>
+        <input id="name-input" type="text"></input>
 
-            <h1> Welcome to Narnia where everything is possible!</h1> 
-            <h2></h2>
+        <button id="opt-Start"></button>
 
-            <fieldset></fieldset>
+    </div>
 
-            <label for="name-input" >Enter you’re hero name</label>
-            <input id="name-input" type="text"></input>
+    <div id="theAdventure" class="welcomePage hidden">
 
-            <button id="opt-1" onclick="resetForm()">Start your journey!!!</button>
-            <button id="opt-2" class="startOver-button" onclick="resetForm()">Start over</button>
-      
+        <h2 id="text-1"></h2>
+        <button id="opt-1"></button>
+        <button id="opt-2"></button>
 
-        </form>
+    </div>
 
+    <div id="startOver" class=" welcomePage hidden">
+        <h1 id="text-startOver"></h1>
+        <button id="opt-startOver"></button>
     </div>
 
 </body>
