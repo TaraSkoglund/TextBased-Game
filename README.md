@@ -4,4 +4,4 @@ The project is about creating a simpler game based on text and simple functions 
 
 by Tara Skoglund
 
-Den ska innehålla en titel, beskrivning av uppgiften och en demo länk (GitHub Pages). 
+taraskoglund.github.io/TextBased-Game 
