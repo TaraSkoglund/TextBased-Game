@@ -1,5 +1,5 @@
 window.addEventListener("DOMContentLoaded", main);
-/** Defines Varialbles  */
+/** Declare Varialbles  */
 let textStart;
 let text1;
 let Start;
