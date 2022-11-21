@@ -12,7 +12,8 @@ let savedInput;
 let label;
 let startOver;
 let textStartOver;
-let buttonStartOver
+let buttonStartOver;
+let username = "";
 
 function main() {
     loadHtmlElements()
@@ -45,8 +46,15 @@ function loadStartStage(){
     textStart.textContent = "Welcome to Narnia where everything is possible!"
 
     button1.textContent = "Start your journey!!!"
-    button1.onclick = loadTheAdventure;
+    button1.onclick = saveNameAndContinue;
 }
+function saveNameAndContinue(){
+    let savedInput = document.getElementById("input");
+    username = input.value
+    input.value = "";
+    loadTheAdventure();
+}
+
 /** First Scene */
 function loadTheAdventure(){
     firstStage.classList.remove("hidden");
@@ -56,9 +64,9 @@ function loadTheAdventure(){
     input.classList.add("hidden");
     // document.getElementById("input".value = "");
 
-    text1.textContent = "Aslan needs your help to retrieve his almighty nail file, he needs it to win a war he has been fighting for over thousand years, tight claws. Do you accept this important assignment?"
+    text1.textContent = "Aslan needs "+ username +" help to retrieve his almighty nail file, he needs it to win a war he has been fighting for over thousand years, tight claws. Do you accept this important assignment?"
 
-    button2.textContent = "I accept this most important assignment."
+    button2.textContent = "I "+ username +" accept this most important assignment."
     button2.onclick = loadAcceptStage;
 
     button3.textContent = "I'd rather go back into the closet."
@@ -72,7 +80,7 @@ function loadAcceptStage(){
     button2.onclick = loadVillageStage;
 
     button3.textContent = "I choose to take the magic bag"
-    button3.onclick = loadVillageStage;
+    button3.onclick = loadVillageStage2;
 }
 /** Second Scene 2a */
 function loadRatherStage(){
@@ -94,8 +102,28 @@ function loadVillageStage(){
     button3.textContent = "I will break into the throne room and force him to hand over Aslans nail file"
     button3.onclick = loadFightStage;
 }
+    /** third Scene 1b*/
+    function loadVillageStage2(){
+    text1.textContent = "When you arrive in the black elfs village you realize that it is the king of black elfs who stole the nail file, what will you do to seek him out?"
+    
+    button2.textContent = "I will seek an audience with him and ask him to return Aslans nail file"
+    button2.onclick = loadAudienceStage2;
+    
+    button3.textContent = "I will break into the throne room and force him to hand over Aslans nail file"
+    button3.onclick = loadFightStage2;
+}    
 /** Fourth Scene 1a */
 function loadAudienceStage(){
+    text1.textContent = "The black elvis king grants your request for an audience with him and he informs you that there are only two ways for you to retrieve the almighty nail file."
+
+    button2.textContent = "By fighting to the death."
+    button2.onclick = loadFightStage;
+
+    button3.textContent = "Or to exchange it for something equally viluable."
+    button3.onclick = loadExchangeStageSword;
+}
+/** Fourth Scene 1b */
+function loadAudienceStage2(){
     text1.textContent = "The black elvis king grants your request for an audience with him and he informs you that there are only two ways for you to retrieve the almighty nail file."
 
     button2.textContent = "By fighting to the death."
@@ -116,6 +144,16 @@ function loadAudienceStage(){
 }
 /** Fourth Scene 2a */
 function loadFightStage(){
+    startOver.classList.remove("hidden");
+    firstStage.classList.add("hidden");
+
+    textStartOver.textContent = "A battle breaks out and you have the upper hand, but the king is cunning and cannot be trusted. and before you know it you are on the ground with an arrow through the chest dying."
+
+    buttonStartOver.textContent = "Start over"
+    buttonStartOver.onclick = loadStartStage;
+}
+/** Fourth Scene 2b */
+function loadFightStage2(){
     startOver.classList.remove("hidden");
     firstStage.classList.add("hidden");
 
